@@ -67,5 +67,7 @@ int main()
 
     } while (strcmp(choice, "quit"));
 
+    eraseQueue(queue);
+
     return 0;
 }

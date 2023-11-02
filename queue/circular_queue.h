@@ -13,6 +13,8 @@ struct queue
 
 p_queue createQueue(int size);
 
+void eraseQueue(p_queue queue);
+
 int isFull(p_queue queue);
 
 int isEmpty(p_queue queue);

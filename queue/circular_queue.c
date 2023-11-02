@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <math.h>
 
 #include "circular_queue.h"
 
@@ -22,6 +21,12 @@ p_queue createQueue(int size)
     new->numberOfElements = 0;
 
     return new;
+}
+
+void eraseQueue(p_queue queue)
+{
+    free(queue->array);
+    free(queue);
 }
 
 int isFull(p_queue queue)
