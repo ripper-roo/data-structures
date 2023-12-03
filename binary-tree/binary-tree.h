@@ -1,29 +1,24 @@
-#include <stdlib.h>
+#ifndef BINARY_TREE
+#define BINARY_TREE
 
-typedef struct node* p_node;
+typedef struct treeNode* p_tree;
 
-struct node
+struct treeNode
 {
     int value;
-    p_node left, right, up;
+    p_tree left, right;
 };
 
-p_node createTree();
+p_tree createTree(char value, p_tree left, p_tree right);
 
-p_node insert(p_node root, int value);
+void eraseTree(p_tree root);
 
-p_node getMin(p_node root);
+void preOrder(p_tree root);
 
-p_node nextNode(p_node node);
+void postOrder(p_tree root);
 
-p_node rightAncestral(p_node node);
+void inorder(p_tree root);
 
-p_node remove(p_node root, int value);
+void breadthTraversal(p_tree tree);
 
-void removeNextNode(p_node node);
-
-p_node searchNode(p_node node, int value);
-
-int numberOfNodes(p_node root);
-
-int height(p_node root);
+#endif
